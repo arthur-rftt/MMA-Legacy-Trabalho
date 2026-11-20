@@ -1,0 +1,21 @@
+digraph FactoryMethod {
+    graph [rankdir=BT, bgcolor="white", pad=.25, nodesep=.55, ranksep=.7];
+    node [shape=record, fontname="DejaVu Sans", fontsize=10, color="#466991", style="filled", fillcolor="#edf4fc"];
+    edge [color="#43546e", fontname="DejaVu Sans", fontsize=9];
+    FabricaGolpe [label="{«abstract» FabricaGolpe|# criarGolpe(): Golpe\l+ executar(...): ResultadoGolpe\l}"];
+    FabricaSoco [label="{FabricaSoco|# criarGolpe(): Golpe}"];
+    FabricaChute [label="{FabricaChute|# criarGolpe(): Golpe}"];
+    FabricaQueda [label="{FabricaQueda|# criarGolpe(): Golpe}"];
+    Golpe [label="{«interface» Golpe|+ aplicar(...): ResultadoGolpe}", fillcolor="#f1fbf4"];
+    Soco [label="{Soco|+ aplicar(...)}"];
+    Chute [label="{Chute|+ aplicar(...)}"];
+    Queda [label="{Queda|+ aplicar(...)}"];
+    {rank=same; FabricaSoco; FabricaChute; FabricaQueda;}
+    {rank=same; Soco; Chute; Queda;}
+    FabricaSoco -> FabricaGolpe [arrowhead=empty];
+    FabricaChute -> FabricaGolpe [arrowhead=empty];
+    FabricaQueda -> FabricaGolpe [arrowhead=empty];
+    Soco -> Golpe [style=dashed, arrowhead=empty];
+    Chute -> Golpe [style=dashed, arrowhead=empty];
+    Queda -> Golpe [style=dashed, arrowhead=empty];
+}

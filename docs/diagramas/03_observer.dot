@@ -1,0 +1,12 @@
+digraph Observer {
+    graph [rankdir=LR, bgcolor="white", pad=.25, nodesep=.8];
+    node [shape=record, fontname="DejaVu Sans", fontsize=10, color="#466991", style="filled", fillcolor="#edf4fc"];
+    edge [color="#43546e", fontname="DejaVu Sans", fontsize=9];
+    Combate [label="{Combate (Subject)|− observadores: List\l|+ adicionarObservador(...)\l+ removerObservador(...)\l− avisar(String): void\l}"];
+    Observador [label="{«interface» ObservadorCombate|+ aoOcorrer(EventoCombate): void}", fillcolor="#f1fbf4"];
+    TelaJogo [label="{TelaJogo|+ aoOcorrer(EventoCombate): void}"];
+    Historico [label="{HistoricoCombate|− eventos: List\l+ aoOcorrer(EventoCombate): void\l}"];
+    Combate -> Observador [label="notifica 0..*", arrowhead=vee];
+    TelaJogo -> Observador [style=dashed, arrowhead=empty];
+    Historico -> Observador [style=dashed, arrowhead=empty];
+}

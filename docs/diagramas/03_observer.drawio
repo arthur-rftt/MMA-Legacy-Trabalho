@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-11-18T12:00:00.000Z" agent="MMA Legacy" version="24.7.17">
+<diagram id="03_observer.drawio" name="Observer">
+<mxGraphModel dx="1300" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0"><root>
+<mxCell id="0"/><mxCell id="1" parent="0"/>
+<mxCell id="Co" value="Combate (Subject)&#xa;------------------------------------&#xa;- observadores: List&#xa;------------------------------------&#xa;+ adicionarObservador(...)&#xa;+ removerObservador(...)&#xa;- avisar(String): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontSize=14;fontFamily=Helvetica;strokeColor=#45658D;fillColor=#f1f7ff;" vertex="1" parent="1"><mxGeometry x="50" y="165" width="300" height="195" as="geometry"/></mxCell>
+<mxCell id="Ob" value="«interface» ObservadorCombate&#xa;-----------------------------------&#xa;+ aoOcorrer(EventoCombate): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontSize=14;fontFamily=Helvetica;strokeColor=#45658D;fillColor=#edfcf6;" vertex="1" parent="1"><mxGeometry x="475" y="170" width="315" height="100" as="geometry"/></mxCell>
+<mxCell id="Te" value="TelaJogo&#xa;-------------------------------------&#xa;+ aoOcorrer(EventoCombate): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontSize=14;fontFamily=Helvetica;strokeColor=#45658D;fillColor=#f1f7ff;" vertex="1" parent="1"><mxGeometry x="895" y="40" width="285" height="95" as="geometry"/></mxCell>
+<mxCell id="Hi" value="HistoricoCombate&#xa;-------------------------------------&#xa;- eventos: List&#xa;+ aoOcorrer(EventoCombate): void" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontSize=14;fontFamily=Helvetica;strokeColor=#45658D;fillColor=#f1f7ff;" vertex="1" parent="1"><mxGeometry x="895" y="305" width="285" height="135" as="geometry"/></mxCell>
+<mxCell id="e0" value="notifica 0..*" edge="1" parent="1" source="Co" target="Ob" style="endArrow=open;dashed=1;html=1;strokeWidth=2;strokeColor=#45658D;"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="e1" value="" edge="1" parent="1" source="Te" target="Ob" style="endArrow=block;endFill=0;dashed=1;html=1;strokeWidth=2;strokeColor=#45658D;"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="e2" value="" edge="1" parent="1" source="Hi" target="Ob" style="endArrow=block;endFill=0;dashed=1;html=1;strokeWidth=2;strokeColor=#45658D;"><mxGeometry relative="1" as="geometry"/></mxCell>
+</root></mxGraphModel></diagram></mxfile>

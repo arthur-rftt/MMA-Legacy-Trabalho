@@ -1,0 +1,10 @@
+digraph Builder {
+    graph [rankdir=LR, bgcolor="white", pad=.25, nodesep=.8];
+    node [shape=record, fontname="DejaVu Sans", fontsize=11, color="#466991", style="filled", fillcolor="#edf4fc"];
+    edge [color="#43546e", fontname="DejaVu Sans", fontsize=10];
+    TelaJogo [label="{TelaJogo|+ criarLutador(): void}", fillcolor="#f7f8fa"];
+    LutadorBuilder [label="{LutadorBuilder|− nome: String\l− socos: int\l− chutes: int\l− grappling: int\l− cardio: int\l|+ nome(String): LutadorBuilder\l+ socos(int): LutadorBuilder\l+ cardio(int): LutadorBuilder\l+ build(): Lutador\l}"];
+    Lutador [label="{Lutador|− nome: String\l− socos: int\l− cardio: int\l− cabeca: int\l|+ getNome(): String\l+ receberDano(...): void\l}"];
+    TelaJogo -> LutadorBuilder [label="usa", style=dashed, arrowhead=open];
+    LutadorBuilder -> Lutador [label="constrói", style=dashed, arrowhead=open];
+}
