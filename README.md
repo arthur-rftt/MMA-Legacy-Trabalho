@@ -57,6 +57,8 @@ src/mmalegacy/
     TelaJogo.java              Swing + Observer concreto
 
 docs/
+   COMPARACAO_PADROES.md
+   preview.png
    diagramas/                     UML em PNG e .drawio editável
 
 ```
