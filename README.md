@@ -2,7 +2,6 @@
 
 **Objetivo acadêmico:** demonstrar orientação a objetos e **Builder, Factory Method e Observer** em um protótipo jogável do MMA Legacy. A versão completa do MMA Legacy continua sendo um projeto HTML/JavaScript independente; este repositório é uma **adaptação reduzida em Java** para fins didáticos, não uma conversão integral.
 
-> **Atenção à exigência da disciplina:** o enunciado diz que os padrões devem ser aplicados ao projeto conjunto da disciplina da Prof. Célia. Antes de substituir o sistema UNIVEL por este jogo na entrega, confirme com a professora ou com o professor responsável que o novo tema é aceito. Você pode usar este protótipo como estudo e demonstração, mesmo que precise entregar a integração ao projeto original.
 
 ## Rodar no Windows
 
@@ -16,7 +15,7 @@
 1. Informe o nome do lutador, escolha entre **Boxe**, **Muay Thai** e **Wrestling** e clique em **Criar lutador**.
 2. Você pode realizar **até duas sessões de camp** (Boxe, Chutes, Grappling ou Cardio). Cada sessão aumenta o atributo correspondente em 2, limitado a 100.
 3. Clique em **Iniciar luta**. A luta possui até **3 rounds, com 4 trocas por round**.
-4. Escolha **SOCO** (atinge cabeça), **CHUTE** (atinge corpo) ou **QUEDA** (desgaste do corpo e energia). O rival reage automaticamente.
+4. A luta acontece automaticamente seguindo o plano de luta selecionado.
 5. A narração exibe os eventos, e as barras mostram dano por região e energia. Quando cabeça ou corpo chega a zero, a luta termina antecipadamente (KO/TKO). Se completar os rounds, ocorre decisão simplificada.
 6. Ao finalizar, o cartel é atualizado. Você evolui no camp entre as lutas.
 
